@@ -27,10 +27,7 @@
     'license': 'AGPL-3',
     'website': 'www.agconstrucciones.com.ar',
     'images': [],
-    'depends': [
-        'base',
-        'product'
-    ],
+    'depends': ['base','product',],
     'data': [
         'views/ag_products_view.xml',
         #'views/menu_items.xml',
