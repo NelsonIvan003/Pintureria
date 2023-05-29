@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Vista del menú AG Productos -->
+    <record id="view_ag_product_tree" model="ir.ui.view">
+        <field name="name">ag.product.tree</field>
+        <field name="model">ag.product</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="code"/>
+                <field name="barcode"/>
+                <field name="description"/>
+                <field name="supplier_number"/>
+                <field name="category_id"/>
+                <field name="category_name"/>
+                <field name="unit"/>
+                <field name="tax"/>
+                <field name="price_1"/>
+                <field name="price_2"/>
+                <field name="price_3"/>
+                <field name="price_4"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- Acción del menú AG Productos -->
+    <record id="action_ag_product" model="ir.actions.act_window">
+        <field name="name">AG Productos</field>
+        <field name="res_model">ag.product</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <!-- Menú AG Productos -->
+    <menuitem id="menu_ag_product" name="AG Productos" parent="base.menu_product" sequence="30"/>
+    <menuitem id="menu_ag_product_list" name="Lista de Productos" parent="menu_ag_product" action="action_ag_product" sequence="10"/>
+</odoo>
